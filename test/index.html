@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled">
+  <head>
+      <meta charset='utf-8'>
+<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+<script src="./tap.js"></script>
+    </head>
+      <body>
+      <div id="me" style="height:100px;width:100px;background-color:red;"></div>
+      <script>
+$('#me').tap(function(){
+  console.log('tap');
+  console.log(this);
+});
+      </script>
+      </body>
+      </html>

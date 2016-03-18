@@ -1,0 +1,34 @@
+{
+  "name": "jquery_tap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tap\u001b[D\u001b[D\u001b[Djquery-tap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsotsi/jquery_tap.git"
+  },
+  "keywords": [
+    "jquery",
+    "tap"
+  ],
+  "author": "tsotsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsotsi/jquery_tap/issues"
+  },
+  "homepage": "https://github.com/Tsotsi/jquery_tap#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "install": "^0.6.0",
+    "jquery": "^2.2.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-util": "^3.0.7"
+  }
+}
