@@ -3,7 +3,7 @@ $.fn.tap = function(func) {
     func = function() {};
   }
   this._flag = false;
-  return this.on('touchstart', (function(_this) {
+  this.on('touchstart', (function(_this) {
     return function() {
       _this._flag = true;
       return _this._timer = setTimeout((function() {
@@ -17,4 +17,5 @@ $.fn.tap = function(func) {
       }
     };
   })(this));
+  return this;
 };

@@ -8,3 +8,4 @@ $.fn.tap=(func)->
     ),300
   .on 'touchend',=>
     if  @_flag then  func.call @
+  @
