@@ -1,4 +1,7 @@
 $.fn.tap = function(func) {
+  if (func == null) {
+    func = function() {};
+  }
   this._flag = false;
   return this.on('touchstart', (function(_this) {
     return function() {
@@ -10,7 +13,7 @@ $.fn.tap = function(func) {
   })(this)).on('touchend', (function(_this) {
     return function() {
       if (_this._flag) {
-        return func();
+        return func.call(_this);
       }
     };
   })(this));
