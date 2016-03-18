@@ -7,5 +7,7 @@ $.fn.tap=(func)->
       @_flag=false
     ),300
   .on 'touchend',=>
-    if  @_flag then  func.call @
+    if  @_flag
+      clearTimeout @_timer
+      func.call @
   @

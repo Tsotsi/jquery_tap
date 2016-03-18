@@ -13,6 +13,7 @@ $.fn.tap = function(func) {
   })(this)).on('touchend', (function(_this) {
     return function() {
       if (_this._flag) {
+        clearTimeout(_this._timer);
         return func.call(_this);
       }
     };
