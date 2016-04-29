@@ -11,8 +11,8 @@
       <div class="me" style="height:100px;width:100px;background-color:red;">3333</div>
       <div class="me" style="height:100px;width:100px;background-color:red;">4444</div>
       <script>
-$('.me').tap(function(){
-  console.log($(this).html(),'hehh');
+$('.me').tap(function(e){
+  console.log($(this).html(),'hehh',e);
 });
       </script>
       </body>

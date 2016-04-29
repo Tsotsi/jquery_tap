@@ -12,6 +12,7 @@ $.fn.tap=(func)->
   .on 'touchend',=>
     idx=@.index arguments[0].target
     if  @_flag[idx]
+      arguments[0].type='tap'
       clearTimeout @_timer[idx]
       func.call @[idx],arguments
   @
