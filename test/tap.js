@@ -19,10 +19,14 @@ $.fn.tap = function(func) {
     return function() {
       var idx;
       idx = _this.index(arguments[0].target);
-      if (_this._flag[idx]) {
-        arguments[0].type = 'tap';
-        clearTimeout(_this._timer[idx]);
-        return func.call(_this[idx], arguments);
+      if (idx === -1) {
+        return func.apply(arguments[0].currentTarget, arguments);
+      } else {
+        if (_this._flag[idx]) {
+          arguments[0].type = 'tap';
+          clearTimeout(_this._timer[idx]);
+          return func.apply(_this[idx], arguments);
+        }
       }
     };
   })(this));

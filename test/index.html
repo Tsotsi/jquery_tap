@@ -10,9 +10,17 @@
       <div class="me" style="height:100px;width:100px;background-color:red;">2222</div>
       <div class="me" style="height:100px;width:100px;background-color:red;">3333</div>
       <div class="me" style="height:100px;width:100px;background-color:red;">4444</div>
+      <div class="meme" style="height:100px;width:100px;background-color:red;">121212<br/>
+          <div class="me" style="height:100px;width:100px;background-color:red;">5555</div>
+      </div>
       <script>
 $('.me').tap(function(e){
-  console.log($(this).html(),'hehh',e);
+    console.log(e);
+    e.stopPropagation();
+  console.log(this,'hehh');
+});
+$('.meme').tap(function(e){
+    console.log(this,'nnnn');
 });
       </script>
       </body>
