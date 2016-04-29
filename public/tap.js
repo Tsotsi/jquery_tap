@@ -21,7 +21,7 @@ $.fn.tap = function(func) {
       idx = _this.index(arguments[0].target);
       if (_this._flag[idx]) {
         clearTimeout(_this._timer[idx]);
-        return func.call(_this[idx]);
+        return func.call(_this[idx], arguments);
       }
     };
   })(this));

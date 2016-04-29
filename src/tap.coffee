@@ -13,5 +13,5 @@ $.fn.tap=(func)->
     idx=@.index arguments[0].target
     if  @_flag[idx]
       clearTimeout @_timer[idx]
-      func.call @[idx]
+      func.call @[idx],arguments
   @
