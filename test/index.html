@@ -6,10 +6,13 @@
 <script src="./tap.js"></script>
     </head>
       <body>
-      <div id="me" style="height:100px;width:100px;background-color:red;"></div>
+      <div class="me" style="height:100px;width:100px;background-color:red;">1111</div>
+      <div class="me" style="height:100px;width:100px;background-color:red;">2222</div>
+      <div class="me" style="height:100px;width:100px;background-color:red;">3333</div>
+      <div class="me" style="height:100px;width:100px;background-color:red;">4444</div>
       <script>
-$('#me').tap(function(){
-  console.log(this,'hehh');
+$('.me').tap(function(){
+  console.log($(this).html(),'hehh');
 });
       </script>
       </body>
